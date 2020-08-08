@@ -1,2 +1,5 @@
 # SQlite
 db.sqlite3
+
+#env
+.env
