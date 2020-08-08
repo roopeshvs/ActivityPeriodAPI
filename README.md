@@ -1,6 +1,6 @@
 # Activity Period API
 
-A Simple REST API to get a list of Users and their Activity Periods.
+A REST API to get a list of Users and their Activity Periods.
 
 ### Cloning The Repo
 
