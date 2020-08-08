@@ -9,6 +9,7 @@ class UserModel(models.Model):
 
 # Activity Period Model
 class ActivityPeriodModel(models.Model):
-    user_id = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='activity_periods')
+    user_id = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='activity_periods', default='W012A3CDE')
     start_time = models.CharField(max_length=50)
     end_time = models.CharField(max_length=50)
+    id = models.AutoField(primary_key=True,unique=True)

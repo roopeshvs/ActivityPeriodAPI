@@ -12,8 +12,8 @@ class Command(BaseCommand):
         with open(options['path'], 'r') as stream:
             activities = yaml.safe_load(stream)
             for activity in activities:
-                foreign_key = UserModel.objects.get(activity_periods=activity['user_id'])
-                user_activity, _ = ActivityPeriodModel.objects.get_or_create(user_id=foreign_key, start_time = activity['start_time'], end_time = activity['end_time'])
+                foreign_key = UserModel.objects.get(id=activity['user_id'])
+                user_activity, _= ActivityPeriodModel.objects.update_or_create(user_id=foreign_key, start_time = activity['start_time'], end_time = activity['end_time'])
                 user_activity.save()
 
         self.stdout.write(self.style.SUCCESS('Successfully Populated Activity Periods!'))
