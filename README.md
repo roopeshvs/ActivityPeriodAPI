@@ -2,7 +2,10 @@
 
 A REST API to get a list of Users and their Activity Periods.
 
-Live at https://activityperiodapi.herokuapp.com/api/users
+Includes Two Custom Commands To Populate Database from a YAML file.
+
+>Live at https://activityperiodapi.herokuapp.com/api/users
+
 Hosted Using Heroku, PostgreSQL.
 
 ### Cloning The Repo
