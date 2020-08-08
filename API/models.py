@@ -3,7 +3,7 @@ from django.conf import settings
 
 # User Model
 class UserModel(models.Model):
-    id = models.CharField(max_length=9, primary_key=True, unique=True)
+    id = models.CharField(max_length=9, primary_key=True, unique=True, default='W012A3CDE') #Default set to counter a bug in Heroku Deployment
     real_name = models.CharField(max_length=50)
     tz = models.CharField(max_length=50)
 
